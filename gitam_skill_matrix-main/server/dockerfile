@@ -1,0 +1,23 @@
+# Backend Dockerfile
+
+# Use the base image
+FROM node:18
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the backend code
+COPY . .
+
+# Install dependencies
+RUN npm install
+
+# Copy the SQL initialization script
+COPY database/init.sql /docker-entrypoint-initdb.d/init.sql
+
+
+# Expose the application port
+EXPOSE 3000
+
+# Command to start the application
+CMD ["npm", "start"]
