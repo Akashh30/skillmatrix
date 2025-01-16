@@ -18,6 +18,8 @@
 // import DisplaySkills from './components/DisplaySkills';
 // import WorkInProgress from './components/WorkInProgress';
 // import DisplayCourseSubskillMapping from './components/DisplayCourseSubskillMapping';
+// import DisplayFaculty from './components/DisplayFaculty';
+// import FacultyForm from './components/FacultyForm';
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -31,8 +33,8 @@
 //       <Routes>
 
 //         {/* Faculty Routes */}
-//         <Route path="/faculty/add" element={<WorkInProgress/>} />
-//         <Route path="/faculty/view" element={<WorkInProgress/>} />
+//         <Route path="/faculty/add" element={<FacultyForm/>} />
+//         <Route path="/faculty/view" element={<DisplayFaculty/>} />
 
 //         {/* Course Routes */}
 //         <Route path="/course/add" element={<CourseForm />} />
@@ -97,6 +99,8 @@ import WorkInProgress from './components/WorkInProgress';
 import DisplayCourseSubskillMapping from './components/DisplayCourseSubskillMapping';
 import DisplayFaculty from './components/DisplayFaculty';
 import FacultyForm from './components/FacultyForm';
+import FacultyCourseMapping from './components/FacultyCourseMapping';
+import Rating from './components/Rating';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -130,11 +134,11 @@ function App() {
         <Route path="/skill-mapping/view" element={<DisplaySkillMapping/>} />
 
         {/* Faculty Mapping Routes */}
-        <Route path="/faculty-mapping/add" element={<WorkInProgress/>} />
+        <Route path="/faculty-mapping/add" element={<FacultyCourseMapping/>} />
         <Route path="/faculty-mapping/view" element={<WorkInProgress/>} />
 
         {/* Rating Routes */}
-        <Route path="/rating/add" element={<WorkInProgress/>} />
+        <Route path="/rating/add" element={<Rating/>} />
         <Route path="/rating/view" element={<WorkInProgress/>} />
 
         {/* Login Route */}
